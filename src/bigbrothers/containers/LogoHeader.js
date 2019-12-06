@@ -4,23 +4,33 @@ import { Button, Icon } from "semantic-ui-react";
 
 const LogoHeader = () => {
   return(
-    <div className='ui secondary menu'>
+    <div
+      className='ui secondary menu'
+      style={{
+        backgroundColor: "orange",
+        display: "flex",
+        justifyContent: "flex-start",
+        marginBottom: "15px"
+      }}>
+      <Link to="/" className="item">
+        <b>Home</b>
+      </Link>
       <Link to="/tickets" className="item">
         Tickets
       </Link>
       <div className = "right menu">
         <Button className="item">
-            <Link to="/project/detail">
-              <Icon name="plus square" />
-              Project
-            </Link>
-          </Button>
-          <Button className="item">
-            <Link to="/ticket/detail" className="item">
-              <Icon name="plus square" />
-              Ticket
-            </Link>
-          </Button>
+          <Link to="/project/detail" className="item">
+            <Icon name="plus square" color="blue" />
+            Project
+          </Link>
+        </Button>
+        <Button className="item">
+          <Link to="/ticket/detail" className="item">
+            <Icon name="plus square" color="blue" />
+            Ticket
+          </Link>
+        </Button>
       </div>
     </div>
   );
