@@ -14,7 +14,7 @@ const INITIAL_STATE = {
   budgetHours: 0,
   usedHours: 0,
   manager: null,
-  loading: false,
+  loading: true,
   error: false // boolean
 };
 
