@@ -11,12 +11,14 @@ import {
     CREATE_TICKET,
     EDIT_TICKET
 } from "./types";
+import history from "../history";
 
 export const createProject = (newProjectValues) => async dispatch => {
   const response = await bigbrothersapi.post("/projects", newProjectValues);
   console.log(response); // debug
 
   dispatch({ type: CREATE_PROJECT, payload: response.data });
+  history.push("/projects");
 };
 
 export const getProjects = () => async dispatch => {
@@ -33,9 +35,10 @@ export const getProject = id => async dispatch => {
 };
 
 export const editProject = (id, formValues) => async dispatch => {
-  const res = await bigbrothersapi.put(`/projects/${id}`, formValues);
+  const res = await bigbrothersapi.patch(`/projects/${id}`, formValues);
 
   dispatch({ type: EDIT_PROJECT, payload: res.data });
+  history.push("/projects");
 };
 
 export const deleteProject = (id) => async dispatch => {
@@ -62,12 +65,14 @@ export const createTicket = (newTicketValues) => async dispatch => {
   console.log(response); // debug
 
   dispatch({ type: CREATE_TICKET, payload: response.data });
+  history.push("/tickets");
 };
 
 export const editTicket = (id, formValues) => async dispatch => {
-  const res = await bigbrothersapi.put(`/tickets/${id}`, formValues);
+  const res = await bigbrothersapi.patch(`/tickets/${id}`, formValues);
 
   dispatch({ type: EDIT_TICKET, payload: res.data });
+  history.push("/tickets");
 };
 
 export const deleteTicket = (id) => async dispatch => {

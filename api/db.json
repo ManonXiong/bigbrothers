@@ -49,7 +49,6 @@
       "due_date": "1/31/20"
     }
   ],
-
   "tickets": [
     {
       "id": 1,
@@ -72,7 +71,7 @@
       "ticket_title": "backend security",
       "ticket_description": "build backend security",
       "project": 1,
-      "urgent_level": "medium",
+      "urgent_level": "low",
       "hours_spent": 35,
       "budgeted_hours": 50,
       "status": "qa",
