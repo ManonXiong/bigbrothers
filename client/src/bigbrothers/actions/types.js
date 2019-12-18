@@ -1,0 +1,10 @@
+export const GET_PROJECTS = "GET_PROJECTS";
+export const GET_PROJECT = "GET_PROJECT";
+export const EDIT_PROJECT = "EDIT_PROJECT";
+export const CREATE_PROJECT = "CREATE_PROJECT";
+export const DELETE_PROJECT = "DELETE_PROJECT";
+export const GET_TICKETS = "GET_TICKETS";
+export const GET_TICKET = "GET_TICKET";
+export const DELETE_TICKET = "DELETE_TICKET";
+export const CREATE_TICKET = "CREATE_TICKET";
+export const EDIT_TICKET = "EDIT_TICKET";
