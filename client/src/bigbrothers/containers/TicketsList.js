@@ -34,33 +34,7 @@ class TicketsList extends React.Component {
       );
     }
   }
-
-  // renderStatus = value => {
-  //   if (value === "open") {
-  //     return (
-  //       <Label attached="bottom right" color="red">
-  //         <div>{`${value}`}</div>
-  //       </Label>
-  //     );
-  //   }
-
-  //   if (value === "medium") {
-  //     return (
-  //       <Label attached="bottom right" color="violet">
-  //         <div>{`${value}`}</div>
-  //       </Label>
-  //     );
-  //   }
-
-  //   if (value === "low") {
-  //     return (
-  //       <Label attached="bottom right" color="blue">
-  //         <div>{`${value}`}</div>
-  //       </Label>
-  //     );
-  //   }
-  // }
-
+  
   renderList = () => {
     return this.props.tickets.map(ticket => {
       return (
